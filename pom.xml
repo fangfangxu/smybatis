@@ -6,7 +6,16 @@
 
     <groupId>com.imooc</groupId>
     <artifactId>sm</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <spring.version>4.0.2.RELEASE</spring.version>
+    </properties>
+    <modules>
+        <module>sm_service</module>
+        <module>sm_web</module>
+    </modules>
 
 
 </project>

@@ -3,6 +3,9 @@ package com.imooc.sm.global;
 import javax.servlet.*;
 import java.io.IOException;
 
+/**
+ * 字符集过滤器
+ */
 public class EncodingFilter implements Filter {
     private String encoding="UTF-8";
 

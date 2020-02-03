@@ -52,7 +52,7 @@
                         <li class="clearfix">
                             <span class="title">部门地址：</span>
                             <div class="li_r">
-                                <input class="chang" name="name" type="text" value="${DEPARTMENT.address}">
+                                <input class="chang" name="address" type="text" value="${DEPARTMENT.address}">
                             </div>
                         </li>
 

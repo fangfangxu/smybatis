@@ -38,7 +38,7 @@ public class DispatcherServlet extends GenericServlet {
         HttpServletRequest request=(HttpServletRequest)servletRequest;
         HttpServletResponse response=(HttpServletResponse)servletResponse;
        //去除请求第一个字符'/'
-        String path=request.getRequestURI().substring(1);
+        String path=request.getServletPath().substring(1);
         //获取请求的类名、方法名
         String className=null;
         String methodName=null;

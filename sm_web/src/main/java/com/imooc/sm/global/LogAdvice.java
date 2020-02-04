@@ -27,7 +27,7 @@ public class LogAdvice {
     /**
      * 记录操作日志
      */
-    @AfterReturning("execution(* com.imooc.sm.controller.*.*(..)) " +
+    @After("execution(* com.imooc.sm.controller.*.*(..)) " +
             "&& !execution(* com.imooc.sm.controller.SelfController.*(..))" +
             "&& !execution(* com.imooc.sm.controller.*.to*(..))")
     public void operationLog(JoinPoint joinPoint) {

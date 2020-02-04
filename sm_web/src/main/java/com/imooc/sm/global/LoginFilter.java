@@ -12,6 +12,7 @@ public class LoginFilter implements Filter {
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
+
         String path = request.getServletPath();
         if (path.toLowerCase().indexOf("login") != -1) {
             //放行

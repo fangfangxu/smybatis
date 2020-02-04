@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt"  uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,12 +51,76 @@
                                 <input class="chang" name="account" type="text" value="${STAFF.account}">
                             </div>
                         </li>
+
+                        <li class="clearfix">
+                            <span class="title">部门：</span>
+                            <div class="li_r">
+                                <select name="did">
+                                    <c:forEach items="${DLIST}" var="dep">
+                                     <c:if test="${STAFF.did==dep.id}">
+                                        <option value="${dep.id}" selected>${dep.name}</option>
+                                    </c:if>
+                                        <c:if test="${STAFF.did!=dep.id}">
+                                            <option value="${dep.id}">${dep.name}</option>
+                                        </c:if>
+                                    </c:forEach>
+                                </select>
+                                <i>*</i>
+                            </div>
+                        </li>
+
                         <li class="clearfix">
                             <span class="title">姓名：</span>
                             <div class="li_r">
                                 <input class="chang" name="name" type="text" value="${STAFF.name}">
                             </div>
                         </li>
+
+
+                        <li class="clearfix">
+                            <span class="title">性别：</span>
+                            <div class="li_r">
+
+                                <span class="radio">
+                                <input name="sex" type="radio" value="男" checked>
+                                <em>男</em>
+                                </span>
+                                <c:if test="${STAFF.sex=='女'}">
+                                <span class="radio">
+                                <input name="sex" type="radio" value="女" checked>
+                                <em>女</em>
+                                </span>
+                                </c:if>
+                                 <c:if test="${STAFF.sex!='女'}">
+                                <span class="radio">
+                                <input name="sex" type="radio" value="女" checked>
+                                <em>女</em>
+                                </span>
+                                   </c:if>
+                            </div>
+                        </li>
+
+                        <li class="clearfix">
+                            <span class="title">身份证号：</span>
+                            <div class="li_r">
+                                <input class="chang" name="idNumber" type="text" value="${STAFF.idNumber}">
+                            </div>
+                        </li>
+
+                        <li class="clearfix">
+                            <span class="title">出生日期：</span>
+                            <div class="li_r">
+                                <input class="chang" name="bornDate" type="text" value="<fmt:formatDate value="${STAFF.bornDate}" pattern="yyyy-MM-dd"/>">
+                            </div>
+                        </li>
+
+                        <li class="clearfix">
+                            <span class="title">备注：</span>
+                            <div class="li_r">
+                                <input class="chang" name="info" type="text" value="${STAFF.info}">
+                            </div>
+                        </li>
+
 
                         <li class="tj_btn">
                             <a href="javascript:history.go(-1);" class="back">返回</a>

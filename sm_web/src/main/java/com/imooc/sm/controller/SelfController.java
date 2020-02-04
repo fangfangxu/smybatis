@@ -87,8 +87,7 @@ public class SelfController {
             request.getRequestDispatcher("/change_password.jsp").forward(request, response);
         } else {
             selfService.changePassword(staff.getId(), password1);
-//            response.sendRedirect("/sm/logout.do");
-          response.getWriter().print(" <script type=\"text/javascript\">parent.location.href=\"/sm/logout.do\"></script>");
+          response.getWriter().print("<script type=\"text/javascript\">parent.location.href=\"../logout.do\"</script>");
         }
 
 

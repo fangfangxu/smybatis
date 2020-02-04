@@ -12,10 +12,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <title>添加员工</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="css/common.css"/>
-    <link rel="stylesheet" type="text/css" href="css/thems.css">
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/thems.css">
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript">
         $(function () {
             //自适应屏幕宽度

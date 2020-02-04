@@ -37,7 +37,7 @@
 <body>
 <div id="left_ctn">
     <ul class="sidenav">
-        <li class="now">
+        <li>
             <div class="nav_m">
                 <span><a>人员管理</a></span>
                 <i>&nbsp;</i>
@@ -52,17 +52,17 @@
             </ul>
         </li>
 
-        <li>
+        <li  class="now">
             <div class="nav_m">
                 <span><a>个人中心</a></span>
                 <i>&nbsp;</i>
             </div>
             <ul class="erji">
-                <li>
-                    <span><a href="#" target="main">个人信息</a></span>
+                <li >
+                    <span><a href="self/info.do" target="main">个人信息</a></span>
                 </li>
                 <li>
-                    <span><a href="#" target="main">修改密码</a></span>
+                    <span><a href="self/toChangePassword.do" target="main">修改密码</a></span>
                 </li>
             </ul>
         </li>

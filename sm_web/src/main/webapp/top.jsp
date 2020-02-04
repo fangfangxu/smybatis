@@ -17,7 +17,7 @@
 <body>
 <div class="head clearfix">
     <div class="logo"><a href="#"><img src="images/logo.png" alt="慕课商城"/></a></div>
-    <div class="curr"><span>欢迎您，XXX[ <a href="logout.do" target="_top">退出</a> ]</span></div>
+    <div class="curr"><span>欢迎您，${USER.name}[ <a href="logout.do" target="_top">退出</a> ]</span></div>
 </div>
 </body>
 </html>

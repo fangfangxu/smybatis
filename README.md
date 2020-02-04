@@ -1,6 +1,6 @@
 # smybatis
 项目练习：人员管理系统
-
+一、
 全路径：http://localhost:8080/sm/staff/list.do
 
      request.getContextPath():获取项目的根路径:http://localhost:8080/sm
@@ -11,3 +11,7 @@
      response.sendRedirect("/sm/toLogin.do"); 
      （2）转发（从web应用根路径开始）：http://localhost:8080/sm
      request.getRequestDispatcher("/index.jsp").forward(request, response); 
+     
+二、
+     
+     

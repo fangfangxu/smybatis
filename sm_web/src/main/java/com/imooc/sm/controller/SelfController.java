@@ -47,5 +47,52 @@ public class SelfController {
         response.sendRedirect("/sm/toLogin.do");
     }
 
+    /**
+     * 个人中心
+     *
+     * @param request
+     * @param response
+     */
+    public void info(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/info.jsp").forward(request, response);
+    }
+
+
+    /**
+     * 打开修改密码页面
+     *
+     * @param request
+     * @param response
+     */
+    public void toChangePassword(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/change_password.jsp").forward(request, response);
+    }
+
+
+    /**
+     * 修改密码页面
+     *
+     * @param request
+     * @param response
+     */
+    public void changePassword(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+        String password = request.getParameter("password");
+        String password1 = request.getParameter("password1");
+        HttpSession session = request.getSession();
+
+        Staff staff = (Staff) session.getAttribute("USER");
+        if (!staff.getPassword().equals(password)) {
+            request.getRequestDispatcher("/change_password.jsp").forward(request, response);
+        } else {
+            selfService.changePassword(staff.getId(), password1);
+            response.sendRedirect("/sm/logout.do");
+//          response.getWriter().print(" <script type=\"text/javascript\">parent.location.href=\"/sm/logout.do\"></script>");
+        }
+
+
+    }
+
 
 }

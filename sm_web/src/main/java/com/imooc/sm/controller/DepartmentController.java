@@ -26,7 +26,7 @@ public class DepartmentController {
        List<Department> list= departmentService.getList();
         request.setAttribute("LIST",list);
         try {
-            request.getRequestDispatcher("../department_list.jsp").forward(request,response);
+            request.getRequestDispatcher("/department_list.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -42,7 +42,7 @@ public class DepartmentController {
     public void toAdd(HttpServletRequest request, HttpServletResponse response){
 
         try {
-            request.getRequestDispatcher("../department_add.jsp").forward(request,response);
+            request.getRequestDispatcher("/department_add.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -62,7 +62,7 @@ public class DepartmentController {
        department.setName(name);
        department.setAddress(address);
        departmentService.add(department);
-       response.sendRedirect("list.do");
+       response.sendRedirect("/sm/department/list.do");
     }
 
     /**
@@ -74,7 +74,7 @@ public class DepartmentController {
         Department department=departmentService.selectById(id);
         request.setAttribute("DEPARTMENT",department);
         try {
-            request.getRequestDispatcher("../department_edit.jsp").forward(request,response);
+            request.getRequestDispatcher("/department_edit.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -96,7 +96,7 @@ public class DepartmentController {
         department.setName(name);
         department.setAddress(address);
         departmentService.edit(department);
-        response.sendRedirect("list.do");
+        response.sendRedirect("/sm/department/list.do");
     }
 
     /**
@@ -106,6 +106,6 @@ public class DepartmentController {
     public void remove(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Integer id=Integer.parseInt(request.getParameter("id"));
         departmentService.delete(id);
-        response.sendRedirect("list.do");
+        response.sendRedirect("/sm/department/list.do");
     }
 }

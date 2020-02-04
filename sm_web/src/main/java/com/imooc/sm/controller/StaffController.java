@@ -35,7 +35,7 @@ public class StaffController {
         List<Staff> list= staffService.getList();
         request.setAttribute("LIST",list);
         try {
-            request.getRequestDispatcher("../staff_list.jsp").forward(request,response);
+            request.getRequestDispatcher("/staff_list.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -53,7 +53,7 @@ public class StaffController {
         List<Department> departmentList= departmentService.getList();
         request.setAttribute("DLIST",departmentList);
         try {
-            request.getRequestDispatcher("../staff_add.jsp").forward(request,response);
+            request.getRequestDispatcher("/staff_add.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -89,7 +89,7 @@ public class StaffController {
         staff.setBornDate(bornDate);
         staff.setDid(did);
         staffService.add(staff);
-        response.sendRedirect("list.do");
+        response.sendRedirect("/sm/staff/list.do");
     }
 
     /**
@@ -104,7 +104,7 @@ public class StaffController {
         Staff staff=staffService.selectById(id);
         request.setAttribute("STAFF",staff);
         try {
-            request.getRequestDispatcher("../staff_edit.jsp").forward(request,response);
+            request.getRequestDispatcher("/staff_edit.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -140,7 +140,7 @@ public class StaffController {
         staff.setBornDate(bornDate);
         staff.setDid(did);
         staffService.edit(staff);
-        response.sendRedirect("list.do");
+        response.sendRedirect("/sm/staff/list.do");
     }
 
     /**
@@ -150,7 +150,7 @@ public class StaffController {
     public void remove(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Integer id=Integer.parseInt(request.getParameter("id"));
         staffService.delete(id);
-        response.sendRedirect("list.do");
+        response.sendRedirect("/sm/staff/list.do");
     }
 
     /**
@@ -161,7 +161,7 @@ public class StaffController {
         Staff staff=staffService.selectById(id);
         request.setAttribute("STAFF",staff);
         try {
-            request.getRequestDispatcher("../staff_detail.jsp").forward(request,response);
+            request.getRequestDispatcher("/staff_detail.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

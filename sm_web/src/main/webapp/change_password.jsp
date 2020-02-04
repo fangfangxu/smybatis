@@ -38,7 +38,7 @@
                         <li class="clearfix">
                             <span class="title">账户名：</span>
                             <div class="li_r">
-                                <input class="chang" name="${USER.account}" type="text" disabled="disabled">
+                                <input class="chang" name=account" type="text" value="${USER.account}" readonly>
                             </div>
                         </li>
 

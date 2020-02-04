@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 
 /**
- * 1、业务日志：非登陆处理日志、非to开头方法的日志
+ * 1、业务操作日志
  * 2、系统日志：业务出现异常记录系统日志
  * 3、登陆日志：login、logout
  */
@@ -104,6 +104,4 @@ public class LogAdvice {
         log.setOperator(operator);
         logService.addLoginLog(log);
     }
-
-
 }

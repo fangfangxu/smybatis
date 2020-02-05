@@ -1,7 +1,7 @@
 # smybatis
 项目练习：人员管理系统
-一、
-全路径：http://localhost:8080/sm/staff/list.do
+
+一、全路径：http://localhost:8080/sm/staff/list.do
 
      request.getContextPath():获取项目的根路径:http://localhost:8080/sm
      request.getServletPath(): /staff/list.do
@@ -105,7 +105,7 @@
         log.setOperator(operator);
         logService.addLoginLog(log);
     }
-}
+    }
 
      
      
